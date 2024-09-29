@@ -78,7 +78,7 @@ const sliders = ref([
         color: "info",
     },
     {
-        name: "Templating",
+        name: "User Exp",
         tooltip: "This is for templating",
         sliderValue: 5,
         color: "surface",
