@@ -1,15 +1,6 @@
 <template>
     <v-card>
         <v-layout>
-            <v-app-bar color="secondary" prominent>
-                <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-                <v-toolbar-title>My files</v-toolbar-title>
-            </v-app-bar>
-
-            <v-navigation-drawer v-model="drawer" :location="$vuetify.display.mobile ? 'bottom' : undefined" temporary>
-                <v-list :items="items"></v-list>
-            </v-navigation-drawer>
 
             <v-main style="height: 500px;">
                 <v-container>
@@ -23,6 +14,10 @@
                             </v-card>
                         </v-col>
                     </v-row>
+                    <v-row>
+                        <v-col cols="3"><v-btn>{{ sum }}</v-btn>
+                        </v-col>
+                        </v-row>
                     <v-row>
                         <v-spacer></v-spacer>
                         <v-col>
@@ -78,7 +73,7 @@ const sliders = ref([
         color: "info",
     },
     {
-        name: "User Exp",
+        name: "User interface",
         tooltip: "This is for templating",
         sliderValue: 5,
         color: "surface",
